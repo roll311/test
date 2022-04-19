@@ -4,140 +4,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rwd響應式網站</title>
+    <title>Document</title>
     <style>
-        .container-grid{
-            width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-areas: 
-            "header header header header"
-            "left middle middle right"
-            "footer footer footer footer"
-            ;
-            grid-gap: 5px;
-        }
-        .header{
-            grid-area: header;
-        }
-        .nav{
-            display: grid;
-            grid-template-areas: 
-            "logo menu menu menu menu";
-            background-color: blue;
-            justify-content: space-around;
-        }
-        .logo{
-            background: red;
-            grid-area: logo;
-        }
-        .logo h2{
-        }
-        .nav a{
-            display: inline-block;
-            background-color: orange;
-            padding: 10px;
-            margin: 0 10px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .menu{
-            grid-area: menu;
-            justify-self: end;
-            background-color: yellow;
-            height: 100%;
-            align-self: center;
-        }
-        .menu a{
-            align-self: center;
-        }
-        .logo h2{
-            font-size: 40px;
-        }
-        .footer{
-            background-color: blue;
-            padding: 30px;
-            text-align: center;
-            font-size: 30px;
-            grid-area: footer;
-        }
-        .left{
-            background-color: yellow;
-            grid-area: left;
-        }
-        .middle{
-            background-color: green;
-            grid-area: middle;
-        }
-        .right{
-            background: red;
-            grid-area: right;
-        }
-        .left,.middle,.right{
-            padding: 20px;
-            height: 300px;
-        }
-
-        @media (max-width:600px){
-            .container-grid{
-            display: grid;
-            grid-template-areas: 
-                "header"
-                "left"
-                "middle"
-                "right"
-                "footer"
-            ;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500&display=swap');
 
 
-        }
+*{
+  margin: 0;
+  padding: 0;
+  list-style:none;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+#menu_control{
+  position: absolute;
+}
+.header{
+  height: 50px;
+  background-color: #ccc;
+  position: relative;
+}
+.logo{
+  width: 60px;
+  height: 50px;
+  margin-left: 10px;
+}
+.logo img{
+  position: absolute; /* ★ */
+  top: 0; /* ★ */
+  bottom: 0; /* ★ */
+  margin: auto; /* ★ */
+}
+.menu_btn{
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.menu_btn span{
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  display: block;
+  overflow: hidden;
+}
+.menu_btn::before{
+  content: '';
+  border-radius:200px;
+  position: absolute;
+  height: 3px;
+  left: 2px;
+  width: 36px;
+  background: #555;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow:0 9px 0 #555,
+             0 -9px 0 #555;
+  transition: .5s;
+  
+}
+.menu_btn:hover::before{
+  background-color: #000;
+  box-shadow:0 9px 0 #000,
+             0 -9px 0 #000;
+}
+nav{
+  background-color: #999;
+  height: calc(100vh - 50px);
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  left: -100%;
+  transition: .5s;
+  text-align: center;
+}
+nav a{
+  text-decoration: none;
+  color:#000;
+  display: block;
+  padding: 20px 0;
+}
+nav a:hover{
+  background-color: #555;
+  color:#fff;
+}
+#menu_control:checked ~ .header nav{
+  left:0;
+}
+
+@media screen and (min-width:768px){
+  .menu_btn{
+    display: none;
+  }
+  .header{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  nav{
+    display: flex;
+    position: relative;
+    left: 0;
+    width: auto;
+    height: auto;
+    top: 0;
+    margin: 0 10px;
+    background-color: transparent;
+  }
+  nav a{
+    padding: 10px 20px;
+  }
+}
+
 
 
 
     </style>
-
 </head>
 <body>
     
+    <input type="checkbox" name="" id="menu_control">
 
-    <div class="container-grid">
-
-        <div class="header">
-            <div class="nav">
-                <div class="logo">
-                    <h2>logo</h2>
-                </div>
-                <div class="menu">
-                <a href="#" class="home">home</a>
-                <a href="#" class="about">about</a>
-                <a href="#" class="portfolio">portfolio</a>
-                <a href="#" class="contact">contact</a>
-                </div>
-            </div>
-            <div class="banner"></div>
-        </div>
-
-        <div class="left">
-            <p>left</p>
-        </div>
-
-        <div class="middle">
-            <p>middle</p>
-        </div>
-
-        <div class="right">
-            <p>right</p>
-        </div>
-
-        <div class="footer">
-            <p>footer</p>
-        </div>
-
-    </div>
-
-
-
-
+<div class="header">
+  <h1 class="logo">
+    <a href="#">
+      <img src="https://fakeimg.pl/60x40/333/fff/?text=logo">
+    </a>
+  </h1>
+  <label for="menu_control" class="menu_btn">
+    <span>選單</span>
+  </label>
+  <nav>
+    <a href="#">links</a>
+    <a href="#">links</a>
+    <a href="#">links</a>
+    <a href="#">links</a>
+    <a href="#">links</a>
+    <a href="#">links</a>
+  </nav>
+</div>
 </body>
 </html>
