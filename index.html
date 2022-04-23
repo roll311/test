@@ -6,165 +6,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&family=Kanit:wght@900&family=Noto+Sans+TC:wght@300;400;500;700&family=Titillium+Web:wght@900&family=Work+Sans:wght@900&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Biryani:wght@700;800;900&family=Noto+Sans+TC:wght@100;300;400;500;600;700;800&display=swap');
 
 
 *{
   margin: 0;
   padding: 0;
-  list-style:none;
+  box-sizing: border-box;
   font-family: 'Noto Sans TC', sans-serif;
   text-decoration: none;
+  text-transform: capitalize;
 }
-.navbar{
-  width: 100%;
-  height: 100vh;
-  background-color:red;
+
+header{
   position: fixed;
-  top: -100%;
-  right: 0;
+  top: 0; left: 0; right: 0;
+  background-color: #333;
+  padding: 0px 7%;
   display: flex;
-  justify-content: end;
-  align-content: space-around;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
 }
-.change{
-  top: 50px;
-}
-.hamburger-menu{
-  width: 40px;
-  height: 40px;
-  position: fixed;
-  top: 5px;
-  right: 20px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.line{
-  height: 5px;
-  width: 100%;
-  background-color: #000;
-  border-radius: 20px;
-}
-.nav-list{
-  text-align: right;
-}
-.nav-link{
-  display: inline-block;
-  color: #000;
-  font-size: 50px;
-  margin: 50px 30px;
-  font-family: 'Work Sans', sans-serif;
+
+header .logo{
+  font-weight: 800;
+  font-size: 25px;
+  color: #fff;
   text-transform: uppercase;
 }
-.header{
-  height: 50px;
-  background-color: #ccc;
+
+header .navbar ul{
+   list-style:none;
+}
+
+header .navbar ul li{
   position: relative;
-}
-.logo{
-  width: 60px;
-  height: 50px;
-  margin-left: 10px;
-}
-.logo img{
-  position: absolute; /* ★ */
-  top: 0; /* ★ */
-  bottom: 0; /* ★ */
-  margin: auto; /* ★ */
+  float: left;
 }
 
+header .navbar ul li a{
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  padding: 20px;
+  display: block;
+  transition: .6s;
+}
 
-@media screen and (min-width:768px){
-  .hamburger-menu{
+header .navbar ul li a:hover{
+  background: #fff;
+  color: #333;
+}
+
+header .navbar ul li ul{
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background: #333;
+  display: none;
+}
+
+header .navbar ul li ul li{
+  width: 100%;
+  border-top: 1px solid #fff;
+}
+
+header .navbar ul li ul li ul{
+  left: 200px;
+  top: 0;
+}
+
+header .navnar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+  display: initial;
+}
+
+#menu-bar{
+  display: none;
+}
+
+header label{
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 300;
+  display: none;}
+
+
+
+
+
+
+@media  (max-width:991px){
+  header{
+    padding: 20px;
+  }
+  
+  header label{
+    display: initial;
+  }
+  
+  header .navbar{
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background-color: #777;
+    border-top: 1px solid #fff;
     display: none;
   }
-  .header{
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
+  
+  header .navbar ul li{
+    width: 100%;
   }
-  .navbar{
-    display: flex;
-    flex-direction: row;
+  
+  header .navbar ul li ul{
+    position: relative;
+    width: 100%;
+  }
+  
+  header .navbar ul li ul li{
+    background-color: #333;
+    color: #000;
+  }
+  
+  header .navbar ul li ul li ul{
+    width: 100%;
     left: 0;
-    top: 0;
-    background-color: transparent;
   }
-  .nav-list{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: center;
+  
+  #menu-bar:checked ~ .navbar{
+    display: initial;
   }
-  .nav-link{
-  display: inline;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 20px;
-  padding: 25px;
-  margin: 0 10px;
-  }
+  
 }
-
-
-
-
     </style>
 </head>
 <body>
-    
-
-<div class="header">
-  <h1 class="logo">
-    <a href="#">
-      <img src="https://fakeimg.pl/60x40/333/fff/?text=logo">
-    </a>
-  </h1>
-
-  <div class="navbar">
-    <div class="hamburger-menu">
-      <div class="line line-1"></div>
-      <div class="line line-2"></div>
-      <div class="line line-3"></div>
-    </div>
-    
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="#" class="nav-link">home</a>
-      </li> 
-      <li class="nav-item">
-        <a href="#" class="nav-link">about</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link">portfolio</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link">contact</a>
-      </li>
-    </ul>
-    
-  </div>
-
-</div>
-
-
-
-<script>
-  const menuIcon = document.querySelector(".hamburger-menu");
-  const navbar = document.querySelector(".navbar");
-
-    menuIcon.addEventListener("click",() => {
-      navbar.classList.toggle("change");
-    })
+    <header>
+  
+        <a href="#" class="logo">logo</a>
+        
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">Menu</label>
+        
+        <nav class=navbar>
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">portfolio +</a>
+              <ul>
+                <li><a href="#">blogs</a></li>
+                <li><a href="#">services +</a>
+                  <ul>
+                    <li><a href="#">html</a></li>
+                    <li><a href="#">css</a></li>
+                    <li><a href="#">js</a></li> 
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">photo</a></li>
+            <li><a href="#">gallery +</a>
+              <ul>
+                <li><a href="#">grid</a></li>
+                <li><a href="#">flex</a></li>
+              </ul>
+            </li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </nav>
+        
+        
+      
+      </header>
+        
 
 
 
 
 
-</script>
+
+
 </body>
 </html>
