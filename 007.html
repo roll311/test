@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小雞慢吞吞.com</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Biryani:wght@700;800;900&family=Noto+Sans+TC:wght@100;300;400;500&display=swap');
+
+*{
+  margin: 0; padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body{
+  background: #f2f2f2;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+main{
+  padding: 40px;
+}
+h1{
+  margin: 10px 0;
+}
+p{
+  font-size: 20px;
+}
+.photo{
+  width: 80%;
+  margin: 30px auto;
+}
+.photo img{
+  width: 100%;
+}
+header{
+  height: 60px;
+  border-bottom: 1px solid rgba(0,0,0,.5);
+  font-family: 'Noto Sans TC', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  align-items: center;
+}
+header .logo{
+  font-size: 25px;
+  font-weight: bold;
+}
+.hamburger{
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.line{
+  width: 100%;
+  height: 4px;
+  background: #000;
+  border-radius: 200px;
+  transition: .5s;
+}
+.change .line-1{
+  transform: rotateZ(-45deg) translate(-6px,8px);
+}
+.change .line-2{
+  opacity: 0;
+}
+.change .line-3{
+  transform: rotateZ(45deg) translate(-6px,-8px);
+}
+nav{
+  width: 100%;
+  height: calc( 100vh - 61px );
+  position: absolute;
+  top: 61px;
+  left: -100%;
+  background: #fff;
+}
+nav.change{
+  left: 0;
+}
+.first-ul li{
+  display: block;
+  text-align: center;
+}
+.first-ul li a{
+  font-size: 20px;
+  border-radius: 10px;
+  color: #555;
+  display: inline-block;
+  width: 80%;
+  margin: 20px 0;
+  height: 30px;
+  line-height: 30px; 
+  padding: 10px 0;
+  text-align: left;
+}
+.sub-menu{
+  position: relative;
+}
+.first-ul li a.sub-menu:after{
+  content: '\ea4e' ;
+  position: absolute;
+  right: 0;
+  color: #333;
+  font-size: 22px;
+  font-family: 'remixicon';
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+.first-ul li a.activea.sub-menu:after{
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+}
+.first-ul li.active ul{
+  display: block;
+}
+.second-ul{
+  display: none;
+}
+.second-ul li{
+  width: 70%;
+  margin: 0 auto;
+  border-left: 2px solid #999;
+}
+.second-ul li a{
+  background: inherit;
+  margin: 10px;
+  padding: 0px 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+  
+        <div class="logo">小雞慢吞吞.com</div>
+        <nav class="navbar">
+        <ul class="first-ul">
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#" class="sub-menu">portfolio</a>
+            <ul class="second-ul">
+              <li><a href="#">bolg</a></li>
+              <li><a href="#">e-f</a></li>
+              <li><a href="#">creative</a></li>
+            </ul>
+          </li>
+          <li><a href="#">contact</a></li>
+        </ul>
+        </nav>
+        <div class="hamburger">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </header>
+      
+      <main>
+        <h1>RWD選單做了半世紀</h1>
+        <p>照著個模式去走不知道幾百年後我才能轉職，現在把內文打進去才發現我的選單壞了，他居然沒有給我滿版是怎麼回事，所以千萬不要把選單往下移就跟千萬別抬頭一樣，視而不見（這個舉例好爛），但沒關係我有女友（乾女友啥事），我也不知道反正拖他下水就是了，雖然他很可愛不過不能說他笨蛋，因為他會記仇一整天，等哪天想起就會拿出來講，突然想到這幾天他好像沒傳大便的貼圖給我，不知道是不是便秘好幾天了</p>
+        <div class="photo">
+          <img src="https://image.presslogic.com/girls.presslogic.com/wp-content/uploads/2021/05/e7e0d4b5.jpg?quality=90" alt="">
+        </div>
+      </main>
+
+      <script>
+          $(document).ready(function(){
+  $('.first-ul li').click(function(){
+    $(this).siblings().removeClass('active');
+    $(this).toggleClass('active');
+  })
+  
+  $('.first-ul li a').click(function(){
+    $(this).siblings().removeClass('activea');
+    $(this).toggleClass('activea');
+  })
+  
+  $('.hamburger').click(function(){
+    $('.navbar').toggleClass('change');
+  })
+})
+
+      </script>
+</body>
+</html>
