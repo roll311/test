@@ -26,11 +26,33 @@ main{
 .item{
   padding: 60px 40px 0 40px;
 }
+.breadcrumb{
+  margin: 30px 0 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 18px;
+}
 h1{
-  padding: 20px 0 10px;
+  padding: 0px 0 10px;
   font-size: 30px;
 }
+.labal-txt{
+  color: #f2f2f2;
+  display: inline-block;
+  background: #333;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin-right: 2px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.date{
+  color: rgb(113, 113, 113);
+}
 p{
+  padding-top: 30px;
   font-size: 20px;
 }
 .photo{
@@ -51,13 +73,13 @@ header{
   position: fixed;
 }
 header .logo{
-  padding-left: 20px;
+  padding-left: 30px;
   font-size: 25px;
   font-weight: bold;
 }
 .hamburger{
   float: right;
-  padding-right: 20px;
+  padding-right: 30px;
   height: 25px;
   width: 25px;
   display: flex;
@@ -159,8 +181,6 @@ nav.change{
     width: auto;
   }
   .first-ul{
-    /* width: 500px; */
-    /* justify-content: space-evenly; */
     position: fixed;
     top: 0;
     right: 0;
@@ -168,39 +188,40 @@ nav.change{
     display: flex;
     justify-content: end;
     align-items: center;
-    padding-right: 250px;
+    padding-right: 100px;
   }
   .first-ul li{
-    margin: 0 10px;
+    margin: 0px 15px;
+    padding: 10px 25px;
+    position: relative;
+    border-radius: 10px;
+    height: 30px;
+    line-height: 30px;
   }
   .first-ul li a{
     text-align: center;
-    padding: 5px 16px;
+    margin: 0;
+    padding: 0 ;
+    width: 100%;
+    height: 100%;
   }
-  .first-ul li a:hover{
+  .first-ul li:hover{
     background: rgba(190, 190, 190, 0.257);
   }
-  .first-ul li a.sub-menu:after{
-    right: -1px;
-    top: 6px;
-}
-  .first-ul li a.sub-menu:hover:after{
-  transform: rotate(-180deg);
-  -webkit-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-}
-  .first-ul li:hover ul{
+  .first-ul li a.sub-menu::after{
+    display: none;
+  }
+  .first-ul li:hover > ul{
   opacity: 1;
   visibility: visible;
-  top: 78px ;
-}
+  top: 60px ;
+  }
   .second-ul{
   position: absolute;
   width: 250px;
-  /* height: 200px; */
   margin: 0 auto;
-  top: 250px;
-  right: 300px;
+  top: 120px;
+  left: -50px;
   opacity: 0;
   visibility: hidden;
   border-radius: 10px;
@@ -210,20 +231,21 @@ nav.change{
   flex-direction: column;
   justify-content: space-evenly;
   transition: .5s;
-}
+  }
   .second-ul li{
   border: none;
   width: 80%;
-  /* background: yellow; */
   margin: 10px auto;
-}
+  padding: 10px 10px;
+  }
+  .second-ul li:hover{
+    background: rgb(188, 188, 188);
+  }
   .second-ul li a{
-  padding: 10px 0px;
-}
+    background: rgba(0, 0, 0, 0);
+  }
   .second-ul li a:hover{
-  background: #333;
-  color: #ffffff;
-}
+  }
   main{
     width: 50%;
     margin: 0 auto;
@@ -256,65 +278,80 @@ nav.change{
 
 
 }
-
     </style>
+
 </head>
 
 
 
 <body>
-    <header class="navbar">
-        <div class="logo">小雞慢吞吞.com</div>
-        <nav class="navbar">
-          <ul class="first-ul">
-            <li><a href="#">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#" class="sub-menu">portfolio</a>
-              <ul class="second-ul">
-                <li><a href="#">bolg</a></li>
-                <li><a href="#">e-f</a></li>
-                <li><a href="#">creative</a></li>
-              </ul>
-            </li>
-            <li><a href="#">contact</a></li>
-          </ul>
-        </nav>
-        <div class="hamburger">
-          <div class="line line-1"></div>
-          <div class="line line-2"></div>
-          <div class="line line-3"></div>
-        </div>
-    </header>
-      
-      <main>
-          <div class="item">
-            <h1>RWD選單做了半世紀</h1>
-            <p>照著個模式去走不知道幾百年後我才能轉職，現在把內文打進去才發現我的選單壞了，他居然沒有給我滿版是怎麼回事，所以千萬不要把選單往下移就跟千萬別抬頭一樣，視而不見（這個舉例好爛），但沒關係我有女友（乾女友啥事），我也不知道反正拖他下水就是了，雖然他很可愛不過不能說他笨蛋，因為他會記仇一整天，等哪天想起就會拿出來講，突然想到這幾天他好像沒傳大便的貼圖給我，不知道是不是便秘好幾天了</p>
-            <div class="photo">
-              <img src="https://image.presslogic.com/girls.presslogic.com/wp-content/uploads/2021/05/e7e0d4b5.jpg?quality=90" alt="">
-            </div>
-            <p>照著個模式去走不知道幾百年後我才能轉職，現在把內文打進去才發現我的選單壞了，他居然沒有給我滿版是怎麼回事，所以千萬不要把選單往下移就跟千萬別抬頭一樣，視而不見（這個舉例好爛），但沒關係我有女友（乾女友啥事），我也不知道反正拖他下水就是了，雖然他很可愛不過不能說他笨蛋，因為他會記仇一整天，等哪天想起就會拿出來講，突然想到這幾天他好像沒傳大便的貼圖給我，不知道是不是便秘好幾天了</p>
-            <div class="photo">
-          </div>
-      </main>
 
-      <script>
-          $(document).ready(function(){
-  $('.first-ul li').click(function(){
+<header class="navbar">
+  <div class="logo">小雞慢吞吞.com</div>
+  <nav class="navbar">
+    <ul class="first-ul">
+      <li><a href="#">雞的家</a></li>
+      <li><a href="#">關於雞</a></li>
+      <li><a href="#" class="sub-menu">雞做筆記</a>
+        <ul class="second-ul">
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScrip</a></li>
+          <li><a href="#">雞的心情日記</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="sub-menu">作品</a>
+        <ul class="second-ul">
+          <li><a href="#">部落格</a></li>
+          <li><a href="#">電商</a></li>
+          <li><a href="#">創意</a></li>
+        </ul>
+      </li>
+      <li><a href="#">聯絡雞</a></li>
+    </ul>
+  </nav>
+  <div class="hamburger">
+    <div class="line line-1"></div>
+    <div class="line line-2"></div>
+    <div class="line line-3"></div>
+  </div>
+</header>
+      
+<main>
+    <div class="item">
+      <div class="breadcrumb">雞的心情日記</div>
+      <h1>RWD選單做了半世紀</h1>
+      <span class="labal-txt">心情</span>
+      <span class="labal-txt">抒發</span>
+      <span class="labal-txt">放閃</span>
+      <span class="labal-txt">前端菜雞</span>
+      <div class="date">2022/04/28</div>
+      <p>照著個模式去走不知道幾百年後我才能轉職，現在把內文打進去才發現我的選單壞了，他居然沒有給我滿版是怎麼回事，所以千萬不要把選單往下移就跟千萬別抬頭一樣，視而不見（這個舉例好爛），但沒關係我有女友（乾女友啥事），我也不知道反正拖他下水就是了，雖然他很可愛不過不能說他笨蛋，因為他會記仇一整天，等哪天想起就會拿出來講，突然想到這幾天他好像沒傳大便的貼圖給我，不知道是不是便秘好幾天了</p>
+      <div class="photo">
+        <img src="https://image.presslogic.com/girls.presslogic.com/wp-content/uploads/2021/05/e7e0d4b5.jpg?quality=90" alt="">
+      </div>
+      <p>照著個模式去走不知道幾百年後我才能轉職，現在把內文打進去才發現我的選單壞了，他居然沒有給我滿版是怎麼回事，所以千萬不要把選單往下移就跟千萬別抬頭一樣，視（這個舉例好爛），但沒關係我有女友（乾女友啥事），我也不知道反正拖他下水就是了，雖然他很可愛不過不能說他笨蛋，因為他會記仇一整天，等哪天想起就會拿出來講，突然想到這幾天他好像沒傳大便的貼圖給我，不知道是不是便秘好幾天了</p>
+    </div>
+</main>
+
+<script>
+  $(document).ready(function(){
+    $('.first-ul li').click(function(){
     $(this).siblings().removeClass('active');
     $(this).toggleClass('active');
-  })
-  
-  $('.first-ul li a').click(function(){
+    })
+
+    $('.first-ul li a').click(function(){
     $(this).siblings().removeClass('activea');
     $(this).toggleClass('activea');
-  })
-  
-  $('.hamburger').click(function(){
-    $('.navbar').toggleClass('change');
-  })
-})
+    })
 
-      </script>
+    $('.hamburger').click(function(){
+    $('.navbar').toggleClass('change');
+    })
+  })
+
+</script>
+
 </body>
 </html>
