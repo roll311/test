@@ -99,7 +99,13 @@ h1{
     margin: 0px 0 30px;
     color: #999;
     border-radius: 10px;
-    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; 較明顯 */
+    /* box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;中 */
+    /* box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px; 中 */
+    
+
+    
   }
   .box h2{
     color: #000;
@@ -254,6 +260,53 @@ nav.change{
   margin: 10px;
   padding: 0px 20px;
 }
+section{
+  margin-top: 20px;
+}
+section h2{
+  margin-bottom: 10px;
+  color: #333;
+}
+section p{
+  letter-spacing: .3px;
+  margin-top: 23px;
+}
+section .code{
+  background: rgb(222, 222, 222);
+  border-radius: 10px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  position: relative;
+}
+section .code .code-js{
+  font-size: 14px;
+  color: #c0c0c0;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.code-text{
+  padding: 0 2px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.code-let{
+  color: rgb(0, 72, 217);
+}
+.code-value{
+  color: rgb(69, 159, 69);
+}
+
+
+
+
+
+
+
 
 
 @media screen and (min-width:768px){
@@ -362,6 +415,7 @@ nav.change{
   .first-ul li.active ul{
   display: none;
   }
+
 
 
 

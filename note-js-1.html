@@ -16,7 +16,7 @@
 <body>
 
 <header class="navbar">
-  <div class="logo"><a href="index.html">小雞慢吞吞.com</a></div>
+  <div class="logo"><a href="index.html"> 小雞慢吞吞.com</a></div>
   <nav class="navbar">
     <ul class="first-ul">
       <li><a href="index.html">雞的家</a></li>
@@ -47,22 +47,34 @@
 </header>
       
 <main>
-  <div class="item">
-    <div class="banner"><p>我是banner</p>
+    <div class="item">
+      <div class="breadcrumb"> 
+        <a href="note-mood-all.html">JavaScript</a>
+        </div>
+      <h1>初學菜雞的 <br> JavaScript筆記</h1>
+      <span class="labal-txt">JavaScript</span>
+      <span class="labal-txt">js</span>
+      <span class="labal-txt">學習</span>
+      <span class="labal-txt">筆記</span>
+      <div class="date">2022/05/11</div>
+      <section>
+        <h2 >起手式</h2>
+        <p>先打出一個簡單的程式碼</p>
+        <div class="code">
+          <span class="code-js">js</span>
+          <span class="code-text code-let">let</span>
+          <span class="code-text code-variable">myName</span>
+          <span class="code-text code-assign">=</span>
+          <span class="code-text code-value">'小雞'</span>
+        </div>
+        <p>
+          以上的code為宣告（let）一個變數（myName），並提供一個值（'小雞'），接下來我們來一一說明這段程式碼。
+        </p>
+        <p>
+          宣告分為：常數const 以及變數let、var
+        </p>
+      </section>
     </div>
-    <section class="new-hot-article">
-      <div class="title">
-        <h2>最新與熱門文章</h2>
-        <a href="note-mood-all.html">所有文章</a>
-      </div>
-      <div class="main-article">
-        <a href="note-mood-2.html"><div class="item-article"> <h3>RWD感覺弄得有模有樣？</h3></div></a>
-        <a href="note-mood-1.html"><div class="item-article"> <h3>RWD選單做了半世紀</h3></div></a>
-        <a href="note-js-1.html"><div class="item-article"> <h3>初學菜雞的JavaScript筆記</h3></div></a>
-        <a href="#"><div class="item-article item-article-end"> <h3>批准主板產業之中無聊畢業</h3></div>
-      </div></a>
-    </section>
-  </div>
 </main>
 
 <script>
@@ -80,6 +92,8 @@
     $('.hamburger').click(function(){
     $('.navbar').toggleClass('change');
     })
+
+    
   })
 
 </script>
