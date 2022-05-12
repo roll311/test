@@ -264,12 +264,16 @@ section{
   margin-top: 20px;
 }
 section h2{
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   color: #333;
 }
 section p{
   letter-spacing: .3px;
-  margin-top: 23px;
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: justify;
+  margin-bottom: 1.8rem;
+  line-height: 1.8;
 }
 section .code{
   background: rgb(222, 222, 222);
@@ -300,7 +304,41 @@ section .code .code-js{
 .code-value{
   color: rgb(69, 159, 69);
 }
-
+section h3{
+  font-size: 22px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+section ol{
+  padding-left: 60px;
+  font-size: 18px;
+  text-align: left;
+}
+section ol li{
+  list-style: decimal;
+  letter-spacing: .3px;
+  font-size: 18px;
+  line-height: 2;
+}
+section ol li a{
+  color: rgb(167, 145, 0);
+}
+section li li::marker{
+  content: counters(list-item,"-",list-item)" ";
+}
+section ol li ol{
+  border-left: 1px solid #c0c0c0;
+}
+.text-ol{
+  padding-left: 20px;
+  text-align: left;
+  margin-top: -25px;
+}
+.text-ol li{
+  letter-spacing: .3px;
+  font-size: 18px;
+  line-height: 2;
+}
 
 
 
