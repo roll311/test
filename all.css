@@ -96,7 +96,7 @@ h1{
 }
 .box{
     padding: 20px 20px;
-    margin: 0px 0 30px;
+    margin: 0px 0 35px;
     color: #999;
     border-radius: 10px;
 /*     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; */
@@ -112,6 +112,7 @@ h1{
   .box h2{
     color: #000;
     font-size: 20px;
+    margin-bottom: 5px;
   }
   .box p{
     padding-top: 0px;
