@@ -342,7 +342,12 @@ section ol li ol{
   font-size: 18px;
   line-height: 2;
 }
-
+.img-box{
+  width: 100%;
+}
+.img-box img{
+  width: 100%;
+}
 
 
 
@@ -456,13 +461,7 @@ section ol li ol{
   .first-ul li.active ul{
   display: none;
   }
-  .img-box{
-  width: 100%;
-  background: red;
-  }
-  .img-box img{
-  width: 100%;
-  }
+
 }
 
 
