@@ -456,14 +456,11 @@ section ol li ol{
   .first-ul li.active ul{
   display: none;
   }
+  .img-box{
+  width: 100%;
+  }
+  .imm-box img{
+  width: 100%;
+  }
 
 
-
-
-
-
-
-
-
-
-}
