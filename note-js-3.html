@@ -59,22 +59,26 @@
       <div class="date">2022/05/12</div>
       <section>
           
-        <h2>2-1:基本語法</h2>
-        <p>let chickenFarm = '小雞'</p>
-        <p>chickenFarm中文為養雞場，上述程式碼簡單來說就是把小雞丟到養雞場裡面!為甚麼要這樣做呢，因為有養雞場後才能管理小雞。</p>
-        <p>JS也是這樣，需要先提供一個暫時儲存資料的地方那個地方就是chickenFarm，而那個地方裡面放的資料就是小雞，這就是上面程式碼在做的事情</p>
+        <h2>2-1:基本語法範例</h2>
+        <pre>let chickenFarm = '小雞'</pre>
+        <p>chickenFarm中文為養雞場，上述程式碼簡單來說就是把小雞丟到養雞場裡面，為甚麼要這樣做呢？因為有養雞場後才能管理小雞。</p>
+        <p>JS也是這樣，需要先提供一個暫時儲存資料的地方那個地方就是chickenFarm，而chickenFarm裡面放的資料就是小雞，這就是上面程式碼在做的事情</p>
         
 
         <h2>2-2:環境設定</h2>
-        <p>要執行上述的程式碼就需要有一個開發環境，讓你輸入程式碼並且執行外還可偵測錯誤，知名的開發環境有VS Code以及 <a src="https://codepen.io/your-work">Code Pen</a>在這裡我會使用<a src="https://codepen.io/your-work">Code Pen</a>作範例</p>
-        <p>先來簡單介紹一下<a src="https://codepen.io/your-work">Code Pen</a> ，註冊登入後點選Pen，我們接下來會使用到的是JS的區塊，跟左下角小小的Console（主控台），主控台的作用是讓開發人員能觀察系統的內部訊息。我們會在這裡即時測試 JavaScript 程式碼。</p>
+        <p>要執行上述的程式碼就需要有一個開發環境，讓你輸入程式碼並且執行外還可偵測錯誤，知名的開發環境有VS Code以及 <a href="https://codepen.io/your-work">Code Pen</a>在這裡我會使用<a href="https://codepen.io/your-work">Code Pen</a>作範例</p>
+
+        <blockquote class="imgur-embed-pub" lang="en" data-id="a/AcJXQIN" data-context="false" ><a href="//imgur.com/a/AcJXQIN"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+
+        <p>先來簡單介紹一下<a href="https://codepen.io/your-work">Code Pen</a> ，註冊登入後點選Pen，我們接下來會使用到的是JS的區塊，跟左下角小小的Console（主控台），主控台的作用是讓開發人員能觀察系統的內部訊息。我們會在這裡即時測試 JavaScript 程式碼。</p>
 
         
         <h2>2-3:基本語法拆解</h2>
-        <p>let chickenFarm = '小雞'</p>
-        <p>那接下來 來一一拆解剛剛展示的程式碼</p>
+        <pre>let chickenFarm = '小雞'</pre>
+        <p>接下來拆解剛剛展示的程式碼</p>
         <div class="img-box"><img src="https://i.postimg.cc/mZp7Dsk6/1.png"> </div>
-        <h4>宣告</h4>
+        <h4>宣告類型</h4>
             <ol class="introduce-ol">
               <li>變數let、var</li>
               <li>常數const</li>
@@ -82,12 +86,163 @@
         <p>為甚麼要宣告呢?因為要告訴電腦說我丟進去的資料，是可以被更改的還是不可以被更改的。</p>
         <p>像上述程式碼變數let就是告知電腦我這個資料是可以被更改的，例如養雞場原本只有一隻小雞，之後我又可以丟入好幾隻小雞。</p>
         <p>若改為常數const則養雞場只能有當初放的小雞，之後不能再放其他小雞。</p>
-        <p>宣告大致是這樣，另外需特別注意因變數var容易造成程式碼的錯誤，所以接下來都使用let這個宣告變數。
-另外若不確定該使用變數或常數，請直接使用常數除非預期會更動。</p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
+        <p>宣告大致是這樣，另外需特別注意變數var容易造成程式碼的錯誤，所以接下來都使用let這個宣告變數。
+若不確定該使用變數或常數，請直接使用常數除非預期會更動。</p>
+        
+        <h4>變數命名</h4>
+        <p>變數名稱可隨意，例如我想養馬變數就改為horseFarm(養馬場)，但有發現一個特別的地方嗎，英文的第二個單詞首字都是大寫，這是因為採用了駝峰命名法，也就是將第一個單字之外的接下來每一個字首大寫。</p>
+        <p>你會問如果我變數只有一個單詞呢?也可以，命名長度不限制，但須要遵從一些規則:</p>
+        <ol class="introduce-ol">
+          <li>需是英文字</li>
+          <li>可加上$、_ 或數字，如$chickenFarm、chicken_Farm，但以小寫英文字母開頭仍是最標準的做法</li>
+          <li>開頭不許加上數字，如：9chickenFarm</li>
+          <li>大小寫有差異，如chickenfarm跟chickenFarm就是不同的變數</li>
+          <li>不可是JavaScript <a href="https://www.w3bai.com/zh-TW/js/js_reserved.html#gsc.tab=0"> 保留關鍵字</a>，如const、let等等</li>
+        </ol>
+
+        <h4>運算子</h4>
+        <p>上述程式語法內的＝就是運算子內的一種，在養雞場的例子來說他像是貨車，把買來的小雞送到養雞場去。</p>
+
+        <p>關於運算子有以下幾種：</p>
+
+        <ol class="introduce-ol">
+          <li>算術運算子</li>
+          <li>賦值運算子</li>
+          <li>比較運算子</li>
+          <li>邏輯運算子</li>
+        </ol>
+
+        <p>接下來來介紹各種常用的運算子</p>
+        
+        <table class="unstyledTable">
+          <thead>
+          <tr>
+          <th colspan="2">算數運算子</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+          <td>＋</td>
+          <td>加法</td>
+          </tr>
+          <tr>
+          <td>&mdash;</td>
+          <td>減法</td>
+          </tr>
+          <tr>
+          <td>＊</td>
+          <td>乘法</td>
+          </tr>
+          <tr>
+          <td>／</td>
+          <td>除法</td>
+          </tr>
+          <tr>
+          <td>％</td>
+          <td>取餘數，如14/3=4.....2 <br> 餘數就是2</td>
+          </tr>
+          <tr>
+          <td>＋＋</td>
+          <td>將值加1，如3++就是3+1=4</td>
+          </tr>
+          <tr>
+          <td>––</td>
+          <td>將值減1，如3-- 就是3-1=2</td>
+          </tr>
+          <tr>
+          <td>＊＊</td>
+          <td>計算Ｘ的Ｙ次方，如5＊＊3 <br> 就是5＾3＝125</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="unstyledTable">
+          <thead>
+          <tr>
+          <th colspan="2">賦值運算子</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+          <td>＝</td>
+          <td>就是我們常用的= <br> 有分配以及指定的意思</td>
+          </tr>
+          <tr>
+          <td>＋＝</td>
+          <td>x=x+y的縮寫</td>
+          </tr>
+          <tr>
+          <td>-＝</td>
+          <td>x=x-y的縮寫</td>
+          </tr>
+          <tr>
+          <td>/＝</td>
+          <td>x=x/y的縮寫</td>
+          </tr>
+          <tr>
+          <td>%＝</td>
+          <td>x=x%y的縮寫</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="unstyledTable">
+          <thead>
+          <tr>
+          <th colspan="2">比較運算子</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+          <td>＝＝＝</td>
+          <td>嚴格的等於</td>
+          </tr>
+          <tr>
+          <td>！＝＝</td>
+          <td>嚴格的不等於</td>
+          </tr>
+          <tr>
+          <td>></td>
+          <td>大於</td>
+          </tr>
+          <tr>
+          <td><</td>
+          <td>小於</td>
+          </tr>
+          <tr>
+          <td>>=</td>
+          <td>大於等於</td>
+          </tr>
+          <tr>
+          <td><=</td>
+          <td>小於等於</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="unstyledTable">
+          <thead>
+          <tr>
+          <th colspan="2">邏輯運算子</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+          <td>&&</td>
+          <td>與，每個值皆為true時才返回true</td>
+          </tr>
+          <tr>
+          <td>||</td>
+          <td>或，只要其中有值為 true 即返回 true</td>
+          </tr>
+          <tr>
+          <td>!</td>
+          <td>非，將值轉換布林值後返回相反值</td>
+          </tr>
+          </tbody>
+        </table>
+
+
 
 
         <!-- <h2 >起手式</h2>
