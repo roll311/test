@@ -458,6 +458,7 @@ section ol li ol{
   }
   .img-box{
   width: 100%;
+  background: red;
   }
   .img-box img{
   width: 100%;
