@@ -7,7 +7,6 @@
     <title>小雞慢吞吞.com</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="icon" href="photo/chicken11.ico" type="image/x-icon">
     <link rel="stylesheet" href="all.css">
 
 </head>
@@ -52,67 +51,44 @@
       <div class="breadcrumb"> 
         <a href="note-mood-all.html">JavaScript</a>
         </div>
-      <h1>初學菜雞的 <br> JavaScript筆記</h1>
+      <h1>2.JavaScript核心概念</h1>
       <span class="labal-txt">JavaScript</span>
       <span class="labal-txt">js</span>
       <span class="labal-txt">學習</span>
       <span class="labal-txt">筆記</span>
-      <div class="date">2022/05/11</div>
+      <div class="date">2022/05/12</div>
       <section>
-        <p>
-           為了想更快速理解JavaScript所以暫且不討論較為深層面的理論，而是用較淺顯易懂的文字去敘述基本的觀念，利用一些生活上的例子，來展示程式碼該如何作用。
-        </p>
-        <p>
-          未來的介紹會先展示一段程式碼之後，說明為甚麼要這樣做? 以及加上貼近現實的例子後再逐一介紹各程式碼的作用。
-        </p>
+          
+        <h2>2-1:基本語法</h2>
+        <p>let chickenFarm = '小雞'</p>
+        <p>chickenFarm中文為養雞場，上述程式碼簡單來說就是把小雞丟到養雞場裡面!為甚麼要這樣做呢，因為有養雞場後才能管理小雞。</p>
+        <p>JS也是這樣，需要先提供一個暫時儲存資料的地方那個地方就是chickenFarm，而那個地方裡面放的資料就是小雞，這就是上面程式碼在做的事情</p>
+        
 
-        <h3>目錄</h3>
-        <ol>
-          <li><a href="note-js-2.html">JavaScript入門理解</a>
-            <ol>
-              <li>JavaScript是甚麼</li>
-              <li>JavaScript的用途</li>
-              <li>JavaScript的使用</li>
-            </ol>
-          </li>
-            <li><a href="note-js-3.html">JavaScript核心概念</a>
-            <ol>
-              <li>基本語法</li>
-              <li>環境設定</li>
-              <li>基本語法拆解</li>
-              <li>宣告</li>
-              <li>變數</li>
-              <li>運算子</li>
-              <li>資料型別</li>
-              <li>Arrary陣列</li>
-              <li>Object物件</li>
-              <li>if else 條件判斷</li>
-              <li>loop迴圈</li>
-              <li>while迴圈</li>
-              <li>Function函式</li>
-            </ol>
-          </li>
-        </ol>
-        <!-- 1:JavaScript入門理解
- 1-1:JavaScript是甚麼
- 1-2:JavaScript的用途
- 1-3:JavaScript的使用
+        <h2>2-2:環境設定</h2>
+        <p>要執行上述的程式碼就需要有一個開發環境，讓你輸入程式碼並且執行外還可偵測錯誤，知名的開發環境有VS Code以及 <a src="https://codepen.io/your-work">Code Pen</a>在這裡我會使用<a src="https://codepen.io/your-work">Code Pen</a>作範例</p>
+        <p>先來簡單介紹一下<a src="https://codepen.io/your-work">Code Pen</a> ，註冊登入後點選Pen，我們接下來會使用到的是JS的區塊，跟左下角小小的Console（主控台），主控台的作用是讓開發人員能觀察系統的內部訊息。我們會在這裡即時測試 JavaScript 程式碼。</p>
 
-2:JavaScript核心概念
- 2-1:基本語法
- 2-2:環境設定
- 2-3:基本語法拆解
- 2-4:宣告
- 2-5:變數
- 2-6:運算子
- 2-7:資料型別
- 2-8:arrary陣列
- 2-9:Object物件
- 2-10:if else 條件判斷
- 2-11:loop迴圈
- 2-12:while迴圈
- 2-13:Function函式
- -->
+        
+        <h2>2-3:基本語法拆解</h2>
+        <p>let chickenFarm = '小雞'</p>
+        <p>那接下來 來一一拆解剛剛展示的程式碼</p>
+        <div class="img-box"><img src="https://i.postimg.cc/mZp7Dsk6/1.png"> </div>
+        <h4>宣告</h4>
+            <ol class="introduce-ol">
+              <li>變數let、var</li>
+              <li>常數const</li>
+            </ol>
+        <p>為甚麼要宣告呢?因為要告訴電腦說我丟進去的資料，是可以被更改的還是不可以被更改的。</p>
+        <p>像上述程式碼變數let就是告知電腦我這個資料是可以被更改的，例如養雞場原本只有一隻小雞，之後我又可以丟入好幾隻小雞。</p>
+        <p>若改為常數const則養雞場只能有當初放的小雞，之後不能再放其他小雞。</p>
+        <p>宣告大致是這樣，另外需特別注意因變數var容易造成程式碼的錯誤，所以接下來都使用let這個宣告變數。
+另外若不確定該使用變數或常數，請直接使用常數除非預期會更動。</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
 
         <!-- <h2 >起手式</h2>
         <p>先打出一個簡單的程式碼</p>
