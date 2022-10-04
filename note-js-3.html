@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小雞慢吞吞.com</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="all.css">
+
+</head>
+
+
+
+<body>
+
+<header class="navbar">
+  <div class="logo"><a href="index.html"> 小雞慢吞吞.com</a></div>
+  <nav class="navbar">
+    <ul class="first-ul">
+      <li><a href="index.html">雞的家</a></li>
+      <li><a href="#">關於雞</a></li>
+      <li><a href="#" class="sub-menu">雞做筆記</a>
+        <ul class="second-ul">
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScrip</a></li>
+          <li><a href="note-mood-all.html">雞的心情日記</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="sub-menu">作品</a>
+        <ul class="second-ul">
+          <li><a href="#">部落格</a></li>
+          <li><a href="#">電商</a></li>
+          <li><a href="#">創意</a></li>
+        </ul>
+      </li>
+      <li><a href="#">聯絡雞</a></li>
+    </ul>
+  </nav>
+  <div class="hamburger">
+    <div class="line line-1"></div>
+    <div class="line line-2"></div>
+    <div class="line line-3"></div>
+  </div>
+</header>
+      
+<main>
+    <div class="item">
+      <div class="breadcrumb"> 
+        <a href="note-mood-all.html">JavaScript</a>
+        </div>
+      <h1>2.JavaScript核心概念</h1>
+      <span class="labal-txt">JavaScript</span>
+      <span class="labal-txt">js</span>
+      <span class="labal-txt">學習</span>
+      <span class="labal-txt">筆記</span>
+      <div class="date">2022/05/12</div>
+      <section>
+        <h2>2-1:基本語法</h2>
+        <p>看不懂?沒關係，先看就對了</p>
+        <p>let chickenFarm = '小雞'</p>
+        <p>chickenFarm中文為養雞場
+用我們聽得懂得語言來說就是把小雞丟到養雞場裡面!為甚麼要這樣做呢，因為有養雞場後才能管理小雞。</p>
+        <p>JS也是這樣，需要先提供一個暫時儲存資料的地方那個地方就是chickenFarm，而那個地方裡面放的資料就是小雞，這就是上面程式碼在做的事情</p>
+        
+
+        <h2>2-2:環境設定</h2>
+        <p>要執行上述的程式碼就需要有一個開發環境，讓你輸入程式碼並且執行程式碼此外還可偵測錯誤，知名的開發環境有ＶＳＣＯＤＥ以及ＣＯＤＥ。ＰＥＮ在這裡我會使用code.pen</p>
+        <p>先來簡單介紹一下code.pen ，註冊登入後點選ＰＥＮ，我們接下來會使用到的是ＪＳ的區塊 跟左下角小小的Console（主控台），主控台的作用是讓開發人員能觀察系統的內部訊息。我們會在這裡即時測試 JavaScript 程式碼。</p>
+
+        
+        <h2>2-3:基本語法拆解</h2>
+        <p>let chickenFarm = '小雞'</p>
+        <p>那接下來來一一拆解剛剛展示的程式碼</p>
+        <p>let->宣告</p>
+        <p>chickenFarm->變數命名</p>
+        <p>=->運算子</p>
+        <p>'小雞'->資料型別</p>
+        <p>宣告:</p>
+        <p>宣告有分兩種類型
+        <ul>
+          <li>變數let、var</li>
+          <li>常數const</li>
+        </ul>
+        </p>
+        <p>為甚麼要宣告呢?因為要告訴電腦說我丟進去的資料，是可以被更改的還是不可以被更改的。</p>
+        <p>像上述程式碼變數let就是告知電腦我這個資料是可以被更改的，例如養雞場原本只有一隻小雞，之後我又可以丟入好幾隻小雞。</p>
+        <p>若改為常數const則養雞場只能有當初放的小雞，之後不能再放其他小雞。</p>
+        <p>宣告大致是這樣，另外有幾點特別注意:
+因變數var容易造成程式碼的錯誤，所以接下來都使用let這個宣告變數。
+
+另外若不確定該使用變數或常數，請直接使用常數除非預期會更動。</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+
+        <!-- <h2 >起手式</h2>
+        <p>先打出一個簡單的程式碼</p>
+        <div class="code">
+          <span class="code-js">js</span>
+          <span class="code-text code-let">let</span>
+          <span class="code-text code-variable">myName</span>
+          <span class="code-text code-assign">=</span>
+          <span class="code-text code-value">'小雞'</span>
+        </div>
+        <p>
+          以上的code為宣告（let）一個變數（myName），並提供一個值（'小雞'），接下來我們來一一說明這段程式碼。
+        </p>
+        <p>
+          宣告分為：常數const 以及變數let、var
+        </p>
+      </section>
+    </div> -->
+</main>
+
+<script>
+  $(document).ready(function(){
+    $('.first-ul li').click(function(){
+    $(this).siblings().removeClass('active');
+    $(this).toggleClass('active');
+    })
+
+    $('.first-ul li a').click(function(){
+    $(this).siblings().removeClass('activea');
+    $(this).toggleClass('activea');
+    })
+
+    $('.hamburger').click(function(){
+    $('.navbar').toggleClass('change');
+    })
+
+    
+  })
+
+</script>
+
+</body>
+</html>
